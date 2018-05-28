@@ -11,6 +11,10 @@ int Check(int A[9][9], int n) {
 		    if (A[i][k] == A[i][j]) {
 		    	res = 0;
 			break;
+		    }	
+		    if (A[k][i] == A[j][i]) {
+		    	res = 0;
+			break;
 		    }		
 		}
 	    }
