@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "func.h"
 
 int main() {
     int n = 9;
@@ -13,6 +14,7 @@ int main() {
 		   {9, 7, 2, 1, 5, 4, 3, 6, 8},
 		   {5, 8, 3, 2, 6, 7, 1, 9, 4},
 		   {6, 1, 4, 3, 8, 9, 7, 2, 5}};
+
     printf("  | 1 2 3  4 5 6  7 8 9\n");
     printf("--|---------------------\n");
     for (int i = 0; i < n; i++) {
