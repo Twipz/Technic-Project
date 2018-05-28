@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "func.h"
 
 int main() {
     int n = 9;
@@ -30,4 +31,6 @@ int main() {
 	    printf("  |\n");	
 	}
     }
+    int ch = Check(A, n);
+    printf("\n%d\n", ch);
 }
