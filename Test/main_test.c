@@ -22,6 +22,20 @@ CTEST(Check, correct_Check) {
     ASSERT_EQUAL(expect, result);
 }
 
+CTEST(Check, uncorrect_Check) {
+    srand(time(NULL));
+    int n = 9;
+    int A[9][9];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            A[i][j] = rand() % 8 + 1;
+        }
+    }
+    int result = Check(A, n);
+    int expect = 0;
+    ASSERT_EQUAL(expect, result);
+}
+
 int main(int argc, const char** argv)  {
     int test_res = ctest_main(argc, argv);
     return test_res;
