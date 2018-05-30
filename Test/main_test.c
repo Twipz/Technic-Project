@@ -45,6 +45,33 @@ CTEST(Check_data, correct_data) {
     ASSERT_EQUAL(expect, result);
 }
 
+CTEST(Check_data, uncorrect_column) {
+    int x1 = 10;
+    int y1 = 1;
+    int number = 0;
+    int result = Check_data(x1, y1, number);
+    int expect = 0;
+    ASSERT_EQUAL(expect, result);
+}
+
+CTEST(Check_data, uncorrect_string) {
+    int x1 = 9;
+    int y1 = 0;
+    int number = 0;
+    int result = Check_data(x1, y1, number);
+    int expect = 0;
+    ASSERT_EQUAL(expect, result);
+}
+
+CTEST(Check_data, uncorrect_number) {
+    int x1 = 9;
+    int y1 = 1;
+    int number = -1;
+    int result = Check_data(x1, y1, number);
+    int expect = 0;
+    ASSERT_EQUAL(expect, result);
+}
+
 int main(int argc, const char** argv)  {
     int test_res = ctest_main(argc, argv);
     return test_res;
