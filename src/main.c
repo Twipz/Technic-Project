@@ -48,9 +48,14 @@ int main() {
         x--; y--;
         printf("Enter the number you want to put in the cell:\n");
         scanf("%d", &num);
-        A[x][y] = num;
-        flag = Check(A, n);
         system("clear");
+        if (Check_data(x + 1, y + 1, num) == 1) {
+            A[x][y] = num;
+            flag = Check(A, n);
+        }
+        else {
+            printf("You entered wrong parameters.\nTry again.\n");
+        }
         printf("    1 2 3   4 5 6   7 8 9  \n");
         printf("  |------------------------\n");
         for (int i = 0; i < n; i++) {

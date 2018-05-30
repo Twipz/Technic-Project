@@ -1,9 +1,9 @@
 CXX=gcc
 CFLAGS =  -c -Wall -Werror -std=c99
 FLAGS  =  -Wall -Werror -std=c99
-OBJECTS = build/main.o build/Check.o
+OBJECTS = build/main.o build/Check.o build/Check_data.o
 
-OB = build/main_test.o build/Check.o
+OB = build/main_test.o build/Check.o build/Check_data.o
 
 .PHONY: clean all bin build bin/sudoku bin/sud_test default test
 
@@ -22,6 +22,9 @@ build/main.o: src/main.c src/func.h
 
 build/Check.o: src/Check.c src/func.h
 	$(CXX) $(CFLAGS) src/Check.c -o build/Check.o
+
+build/Check_data.o: src/Check_data.c src/func.h
+	$(CXX) $(CFLAGS) src/Check_data.c -o build/Check_data.o
 
 
 bin/sud_test/prog_test: $(OB)
