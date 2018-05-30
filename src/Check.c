@@ -6,6 +6,9 @@ int Check(int A[9][9], int n) {
     int res = 1;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
+            if (A[i][j] == 0) {
+                res = 0;
+            }
             for (int k = 0; k < n; k++) {
                 if (j != k) {
                     if (A[i][k] == A[i][j]) {
