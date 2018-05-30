@@ -36,6 +36,15 @@ CTEST(Check, uncorrect_Check) {
     ASSERT_EQUAL(expect, result);
 }
 
+CTEST(Check_data, correct_data) {
+    int x1 = 9;
+    int y1 = 1;
+    int number = 0;
+    int result = Check_data(x1, y1, number);
+    int expect = 1;
+    ASSERT_EQUAL(expect, result);
+}
+
 int main(int argc, const char** argv)  {
     int test_res = ctest_main(argc, argv);
     return test_res;
