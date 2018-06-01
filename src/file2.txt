@@ -1,0 +1,3 @@
+1. New game
+ 3. Exit
+Rules: The rules of Sudoku are very simple. In a typical 9x9 Sudoku grid,there are nine rows, nine columns and nine 3x3 boxes. The objective is to fill up the grid with the digits from 1 to 9 so that each digit of 1 through 9 appears only once in each row, each column and each 3x3 box.
